@@ -21,7 +21,6 @@ public class Decoder implements IDecoder{
 				message = message + letter;
 				counter = inFile.readInt();
 				if(counter == -1) {
-					System.out.println("end of file closing loop");
 					open = false;
 				}
 				pos = (int) inFile.getFilePointer();
