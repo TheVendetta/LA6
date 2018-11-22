@@ -13,12 +13,17 @@ public class Decoder implements IDecoder{
 		int counter = 0;
 		int pos;
 		char letter;
+		boolean open = true;
 		try {
 			RandomAccessFile inFile = new RandomAccessFile(filePath,"r");
-			while(counter != -1) {
+			while(open) {
 				letter = inFile.readChar();
 				message = message + letter;
 				counter = inFile.readInt();
+				if(counter == -1) {
+					System.out.println("end of file closing loop");
+					open = false;
+				}
 				pos = (int) inFile.getFilePointer();
 				inFile.seek(counter + pos);
 			}

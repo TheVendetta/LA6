@@ -1,8 +1,9 @@
 package edu.wmich.cs1120.LA6;
+import java.io.*;
 
 public class Main {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException{
 		IEncoder encoder = new Encoder();
 		IDecoder decoder = new Decoder();
 		String inputFileName = "input.txt";
