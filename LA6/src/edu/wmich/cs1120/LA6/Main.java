@@ -2,6 +2,7 @@ package edu.wmich.cs1120.LA6;
 
 public class Main {
 
+
 	IEncoder encoder = new Encoder();
 	IDecoder decoder = new Decoder();
 	String inputFileName = "input.txt";
