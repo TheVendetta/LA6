@@ -50,6 +50,8 @@ public class Encoder implements IEncoder {
                     rndOffset = rnd.nextInt(20) + 1;
                     outFile.writeInt(rndOffset);
                     outFile.seek(outFile.getFilePointer() + rndOffset);
+                } else {
+                	outFile.writeInt(-1);
                 }
 
             }
