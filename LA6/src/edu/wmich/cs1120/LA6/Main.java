@@ -3,6 +3,10 @@ import java.io.*;
 
 public class Main {
 
+	/**
+	 * @param args 
+	 * @throws IOException added for decoder extension
+	 */
 	public static void main(String[] args) throws IOException{
 		IEncoder encoder = new Encoder();
 		IDecoder decoder = new Decoder();

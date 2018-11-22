@@ -39,6 +39,8 @@ public class Encoder implements IEncoder {
         try {
             RandomAccessFile outFile = new RandomAccessFile(outputFilePath, "rw");
 
+            outFile.setLength(0);
+            
             char[] inputCharArr = inputText.toCharArray();
             int rndOffset = 1;
 
